@@ -13,7 +13,7 @@ class Artist
   @@artists = []
 
   def initialize
-    @@artists << self
+    self.class.all << self
     @songs = []
   end
 
@@ -21,9 +21,9 @@ class Artist
 #    @@artists.detect{|a| a.name == name}
 #  end
 
-  def self.all
-    @@artists
-  end
+#  def self.all
+#    @@artists
+#  end
 
 #  def self.reset_all
 #    self.all.clear
